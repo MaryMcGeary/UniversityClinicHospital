@@ -11,5 +11,16 @@ namespace UniversityClinicHospital
         public double Salary { get; protected set; }
         public bool Paid = false;
         public string TypeOfEmployee { get; protected set; }
+
+        public void PaySalary()
+        {
+            Console.WriteLine($"The {TypeOfEmployee}, Employee #{EmployeeNumber}, was paid {Salary}.");
+            Paid = true;
+        }
+
+        public virtual void ListAttributes()
+        {
+            Console.WriteLine(Name, EmployeeNumber, Salary, Paid);
+        }
     }
 }

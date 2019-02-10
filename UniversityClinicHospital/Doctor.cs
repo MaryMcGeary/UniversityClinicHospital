@@ -12,6 +12,9 @@ namespace UniversityClinicHospital
         {
             Name = name;
             EmployeeNumber = employeeNumber;
+            Salary = 90000.00;
+            TypeOfEmployee = "Doctor";
+            Paid = false;
             Specialty = specialty;
         }
 

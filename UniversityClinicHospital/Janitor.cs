@@ -11,7 +11,10 @@ namespace UniversityClinicHospital
         public Janitor(string name, int employeeNumber)
         {
             Name = name;
-            EmployeeNumber = employeeNumber;            
+            EmployeeNumber = employeeNumber;
+            Salary = 40000.00;
+            TypeOfEmployee = "Janitor";
+            Paid = false;
         }
 
         public void StartSweeping()

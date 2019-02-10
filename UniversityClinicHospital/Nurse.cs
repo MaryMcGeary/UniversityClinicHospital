@@ -11,7 +11,10 @@ namespace UniversityClinicHospital
         public Nurse(string name, int employeeNumber, int numberOfPatients)
         {
             Name = name;
-            EmployeeNumber = employeeNumber;            
+            EmployeeNumber = employeeNumber;
+            Salary = 50000;
+            TypeOfEmployee = "Nurse";
+            Paid = false;
             NumberOfPatients = numberOfPatients;
         }
 
