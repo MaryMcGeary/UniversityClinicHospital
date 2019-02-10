@@ -6,11 +6,24 @@ namespace UniversityClinicHospital
 {
     public class Janitor : Employee
     {
-        bool sweeping;
+        public bool IsSweeping = false;
 
-        void Sweeping()
+        public Janitor(string name, int employeeNumber)
         {
-
+            Name = name;
+            EmployeeNumber = employeeNumber;            
         }
+
+        public void StartSweeping()
+        {
+            IsSweeping = true;
+        }
+
+        public void StopSweeping()
+        {
+            IsSweeping = false;
+        }
+
+
     }
 }

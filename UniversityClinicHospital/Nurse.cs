@@ -6,16 +6,23 @@ namespace UniversityClinicHospital
 {
     public class Nurse : Employee
     {
-        int numberOfPatients;
+        public int NumberOfPatients { get; private set; }
 
-        void DrawBlood()
+        public Nurse(string name, int employeeNumber, int numberOfPatients)
         {
-
+            Name = name;
+            EmployeeNumber = employeeNumber;            
+            NumberOfPatients = numberOfPatients;
         }
 
-        void CareForPatient()
+        public void DrawBlood(Patient patient)
         {
+            patient.SubtractBlood(4);
+        }
 
+        public void CareForPatient(Patient patient)
+        {
+            patient.AddHealth(5);
         }
     }
 }

@@ -4,17 +4,12 @@ using System.Text;
 
 namespace UniversityClinicHospital
 {
-    public class Employee
+    public abstract class Employee
     {
-        string name;
-        int employeeNumber;
-        double salary;
-        bool paid;
-
-        // may be abstract
-        void PaySalary()
-        {
-
-        }
+        public string Name { get; protected set; }
+        public int EmployeeNumber { get; protected set; }
+        public double Salary { get; protected set; }
+        public bool Paid = false;
+        public string TypeOfEmployee { get; protected set; }
     }
 }

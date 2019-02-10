@@ -6,11 +6,22 @@ namespace UniversityClinicHospital
 {
     public class Receptionist : Employee
     {
-        bool OnPhone;
-
-        void OnThePhone()
+        public bool OnPhone = false;
+        
+        public Receptionist(string name, int employeeNumber)
         {
+            Name = name;
+            EmployeeNumber = employeeNumber;           
+        }
 
+        public void GetOnThePhone()
+        {
+            OnPhone = true;
+        }
+
+        public void GetOffThePhone()
+        {
+            OnPhone = false;
         }
     }
 }
