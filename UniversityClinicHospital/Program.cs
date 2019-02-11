@@ -12,8 +12,8 @@ namespace UniversityClinicHospital
         static void MainMenu()
         {
             Hospital myHospital = new Hospital();
-            Receptionist myReceptionist = new Receptionist();
-            Janitor myJanitor = new Janitor();
+            Receptionist myReceptionist = new Receptionist("name", 12);
+            Janitor myJanitor = new Janitor("name", 11);
             var patient = new Patient();
 
             Console.WriteLine("Welcome to University Clinic Hospital!");
@@ -28,10 +28,10 @@ namespace UniversityClinicHospital
             ConsoleKeyInfo keyPressed = Console.ReadKey();
 
             string menuChoice;
-            string doctorChoice;
-            string nurseChoice;
-            string receptionistChoice;
-            string janitorChoice;
+            //string doctorChoice;
+            //string nurseChoice;
+            //string receptionistChoice;
+            //string janitorChoice;
 
             if (char.IsDigit(keyPressed.KeyChar))
             {
@@ -59,54 +59,56 @@ namespace UniversityClinicHospital
                     myHospital.ListEmployees();
                     break;
                 case "2":
-                    Console.WriteLine("\n\nDoctor Choices:");
-                    Console.WriteLine("Press 1 to have the doctor draw blood from patient");
-                    Console.WriteLine("Press 2 to have the doctor care for the patient");
-                    Console.WriteLine("Press 0 to Quit");
-                    keyPressed = Console.ReadKey();
-                    if (char.IsDigit(keyPressed.KeyChar))
-                    {
-                        doctorChoice = keyPressed.KeyChar.ToString();
-                    }
-                    switch (doctorChoice)
-                    {
-                        case "0":
-                            Console.WriteLine("\nThanks for visiting University Clinic Hospital!");
-                            break;
-                        case "1":
-                            myHospital.PerformTask("Doctor", 1);
-                            Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
-                            break;
-                        case "2":
-                            myHospital.PerformTask("Doctor", 2);
-                            Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
-                            break;
-                    }
+                    ////Make a doctorChoice() method
+                    //Console.WriteLine("\n\nDoctor Choices:");
+                    //Console.WriteLine("Press 1 to have the doctor draw blood from patient");
+                    //Console.WriteLine("Press 2 to have the doctor care for the patient");
+                    //Console.WriteLine("Press 0 to Quit");
+                    //keyPressed = Console.ReadKey();
+                    //if (char.IsDigit(keyPressed.KeyChar))
+                    //{
+                    //    doctorChoice = keyPressed.KeyChar.ToString();
+                    //}
+                    //switch (doctorChoice)
+                    //{
+                    //    case "0":
+                    //        Console.WriteLine("\nThanks for visiting University Clinic Hospital!");
+                    //        break;
+                    //    case "1":
+                    //        myHospital.PerformTask("Doctor", 1);
+                    //        Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
+                    //        break;
+                    //    case "2":
+                    //        myHospital.PerformTask("Doctor", 2);
+                    //        Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
+                    //        break;
+                    //}
                     break;
                 case "3":
-                    Console.WriteLine("\n\nNurse Choices:");
-                    Console.WriteLine("Press 1 to have the nurse draw blood from patient");
-                    Console.WriteLine("Press 2 to have the nurse care for the patient");
-                    Console.WriteLine("Press 0 to Quit");
-                    keyPressed = Console.ReadKey();
-                    if (char.IsDigit(keyPressed.KeyChar))
-                    {
-                        nurseChoice = keyPressed.KeyChar.ToString();
-                    }
-                    switch (nurseChoice)
-                    {
-                        case "0":
-                            Console.WriteLine("\nThanks for visiting University Clinic Hospital!");
-                            break;
-                        case "1":
-                            myHospital.PerformTask("Nurse", 1);
-                            Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
-                            break;
-                        case "2":
-                            myHospital.PerformTask("Nurse", 2);
-                            Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
-                            break;
-                    }
+                    // //Make a NurseChoice() method
+                    //Console.WriteLine("\n\nNurse Choices:");
+                    //Console.WriteLine("Press 1 to have the nurse draw blood from patient");
+                    //Console.WriteLine("Press 2 to have the nurse care for the patient");
+                    //Console.WriteLine("Press 0 to Quit");
+                    //keyPressed = Console.ReadKey();
+                    //if (char.IsDigit(keyPressed.KeyChar))
+                    //{
+                    //    nurseChoice = keyPressed.KeyChar.ToString();
+                    //}
+                    //switch (nurseChoice)
+                    //{
+                    //    case "0":
+                    //        Console.WriteLine("\nThanks for visiting University Clinic Hospital!");
+                    //        break;
+                    //    case "1":
+                    //        myHospital.PerformTask("Nurse", 1);
+                    //        Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
+                    //        break;
+                    //    case "2":
+                    //        myHospital.PerformTask("Nurse", 2);
+                    //        Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
+                    //        break;
+                    //}
                     break;
                 case "4":
                     myReceptionist.GetOnThePhone();

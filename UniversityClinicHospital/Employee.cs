@@ -14,13 +14,13 @@ namespace UniversityClinicHospital
 
         public void PaySalary()
         {
-            Console.WriteLine($"The {TypeOfEmployee}, Employee #{EmployeeNumber}, was paid {Salary}.");
+            Console.WriteLine($"\nThe {TypeOfEmployee}, Employee #{EmployeeNumber}, was paid {Salary}.");
             Paid = true;
         }
 
         public virtual void ListAttributes()
         {
-            Console.WriteLine(Name, EmployeeNumber, Salary, Paid);
+            Console.WriteLine($"\n { Name}, {EmployeeNumber}, {Salary}, {Paid}");
         }
     }
 }
