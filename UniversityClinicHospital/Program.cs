@@ -14,6 +14,7 @@ namespace UniversityClinicHospital
             Hospital myHospital = new Hospital();
             Receptionist myReceptionist = new Receptionist();
             Janitor myJanitor = new Janitor();
+            var patient = new Patient();
 
             Console.WriteLine("Welcome to University Clinic Hospital!");
             Console.WriteLine("\nPress 1 see a list of employees and their attributes");
@@ -70,10 +71,11 @@ namespace UniversityClinicHospital
                             break;
                         case "1":
                             myHospital.PerformTask("Doctor", 1);
-                            //Console.WriteLine($"The patient's blood level is {doctor.DrawBlood()}")
+                            Console.WriteLine($"The patient's blood level is {patient.BloodLevel}");
                             break;
                         case "2":
                             myHospital.PerformTask("Doctor", 2);
+                            Console.WriteLine($"The patient's health level is {patient.HealthLevel}");
                             break;
                     }
                     break;
