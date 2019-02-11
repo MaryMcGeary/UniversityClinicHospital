@@ -17,14 +17,9 @@ namespace UniversityClinicHospital
             Paid = false;
         }
 
-        public void GetOnThePhone()
+        public void OnThePhone()
         {
-            OnPhone = true;
-        }
-
-        public void GetOffThePhone()
-        {
-            OnPhone = false;
+            OnPhone = !OnPhone;
         }
     }
 }

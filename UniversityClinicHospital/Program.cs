@@ -65,16 +65,13 @@ namespace UniversityClinicHospital
                         myHospital.ListEmployees();
                         break;
                     case "2":
-                        //Make a doctorChoice() method??
+                        //Make a doctorChoice() a separate method??
                         Console.WriteLine("\n\nDoctor Choices:");
                         Console.WriteLine("Press 1 to have the doctor draw blood from patient");
                         Console.WriteLine("Press 2 to have the doctor care for the patient");
                         Console.WriteLine("Press 0 to Quit");
                         doctorChoice = Console.ReadLine();
-                        //if (char.IsDigit(keyPressed.KeyChar))
-                        //{
-                        //    doctorChoice = keyPressed.KeyChar.ToString();
-                        //}
+                        
                         switch (doctorChoice)
                         {
                             case "0":
@@ -93,16 +90,13 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "3":
-                        //Make a NurseChoice() method??
+                        //Make a NurseChoice() a separate method??
                         Console.WriteLine("\n\nNurse Choices:");
                         Console.WriteLine("Press 1 to have the nurse draw blood from patient");
                         Console.WriteLine("Press 2 to have the nurse care for the patient");
                         Console.WriteLine("Press 0 to Quit");
                         nurseChoice = Console.ReadLine();
-                        //if (char.IsDigit(keyPressed.KeyChar))
-                        //{
-                        //    nurseChoice = keyPressed.KeyChar.ToString();
-                        //}
+                        
                         switch (nurseChoice)
                         {
                             case "0":
@@ -119,7 +113,7 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "4":
-                        myReceptionist.GetOnThePhone();
+                        myReceptionist.OnThePhone();
                         if (myReceptionist.OnPhone == true)
                         {
                             Console.WriteLine("\nThe receptionist is on the phone\n");
@@ -130,7 +124,7 @@ namespace UniversityClinicHospital
                         }
                         break;
                     case "5":
-                        myJanitor.StartSweeping();
+                        myJanitor.Sweeping();
                         if (myJanitor.IsSweeping == true)
                         {
                             Console.WriteLine("\nThe janitor is sweeping\n");

@@ -17,16 +17,10 @@ namespace UniversityClinicHospital
             Paid = false;
         }
 
-        public void StartSweeping()
+        public void Sweeping()
         {
-            IsSweeping = true;
+            IsSweeping = !IsSweeping;
         }
-
-        public void StopSweeping()
-        {
-            IsSweeping = false;
-        }
-
-
+        
     }
 }

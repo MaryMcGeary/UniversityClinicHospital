@@ -8,11 +8,11 @@ namespace UniversityClinicHospital.Tests
     public class ReceptionistTest
     {
         [Fact]
-        public void IsOnPhone()
+        public void IsReceptionistOnThePhone()
         {
-            var receptionist = new Receptionist("name", 123);
+            var receptionist = new Receptionist("name", 111);
 
-            receptionist.GetOnThePhone();
+            receptionist.OnThePhone();
 
             Assert.True(receptionist.OnPhone);
         }

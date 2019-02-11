@@ -8,11 +8,11 @@ namespace UniversityClinicHospital.Tests
     public class JanitorTest
     {
         [Fact]
-        public void JanitorIsSweeping()
+        public void Sweeping()
         {
-            var janitor = new Janitor("name", 555);
+            var janitor = new Janitor("name", 111);
 
-            janitor.StartSweeping();
+            janitor.Sweeping();
 
             Assert.True(janitor.IsSweeping);
         }
