@@ -40,7 +40,7 @@ namespace UniversityClinicHospital
                 }
                 else
                 {
-                    Console.WriteLine($"The {employee.TypeOfEmployee}, Employee #{employee.EmployeeNumber}, has already been paid.");
+                    Console.WriteLine($"\nThe {employee.TypeOfEmployee}, Employee #{employee.EmployeeNumber}, has already been paid.");
                 }
             }
         }
