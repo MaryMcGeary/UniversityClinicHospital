@@ -8,6 +8,10 @@ namespace UniversityClinicHospital
     {
         public bool IsSweeping = false;
 
+        public Janitor()
+        {
+        }
+
         public Janitor(string name, int employeeNumber)
         {
             Name = name;

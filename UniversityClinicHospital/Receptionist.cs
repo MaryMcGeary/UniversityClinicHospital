@@ -7,6 +7,10 @@ namespace UniversityClinicHospital
     public class Receptionist : Employee
     {
         public bool OnPhone = false;
+
+        public Receptionist()
+        {
+        }
         
         public Receptionist(string name, int employeeNumber)
         {
