@@ -5,7 +5,8 @@ namespace UniversityClinicHospital
     class Program
     {
         static void Main(string[] args)
-        {  
+        {
+            MainMenu();
         }
 
         static void MainMenu()
@@ -48,7 +49,7 @@ namespace UniversityClinicHospital
                 janitorChoice = "default";
             }
 
-           switch (menuChoice)
+            switch (menuChoice)
            {
                 case "0":
                     Console.WriteLine("\nThanks for visiting University Clinic Hospital!");
@@ -61,6 +62,7 @@ namespace UniversityClinicHospital
                     Console.WriteLine("Press 1 to have the doctor draw blood from patient");
                     Console.WriteLine("Press 2 to have the doctor care for the patient");
                     Console.WriteLine("Press 0 to Quit");
+                    Console.ReadKey();
                     switch (doctorChoice)
                     {
                         case "0":
@@ -68,6 +70,7 @@ namespace UniversityClinicHospital
                             break;
                         case "1":
                             myHospital.PerformTask("Doctor", 1);
+                            //Console.WriteLine($"The patient's blood level is {doctor.DrawBlood()}")
                             break;
                         case "2":
                             myHospital.PerformTask("Doctor", 2);
@@ -79,6 +82,7 @@ namespace UniversityClinicHospital
                     Console.WriteLine("Press 1 to have the nurse draw blood from patient");
                     Console.WriteLine("Press 2 to have the nurse care for the patient");
                     Console.WriteLine("Press 0 to Quit");
+                    Console.ReadKey();
                     switch (nurseChoice)
                     {
                         case "0":
@@ -122,7 +126,7 @@ namespace UniversityClinicHospital
                     Console.WriteLine("\nPress ANY KEY to continue");
                     Console.ReadKey();
                     break;
-           }
+            }
         }
     }
 }
