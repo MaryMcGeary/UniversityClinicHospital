@@ -36,18 +36,18 @@ namespace UniversityClinicHospital
             if (char.IsDigit(keyPressed.KeyChar))
             {
                 menuChoice = keyPressed.KeyChar.ToString();
-                doctorChoice = keyPressed.KeyChar.ToString();
-                nurseChoice = keyPressed.KeyChar.ToString();
-                receptionistChoice = keyPressed.KeyChar.ToString();
-                janitorChoice = keyPressed.KeyChar.ToString();
+                //doctorChoice = keyPressed.KeyChar.ToString();
+                //nurseChoice = keyPressed.KeyChar.ToString();
+                //receptionistChoice = keyPressed.KeyChar.ToString();
+                //janitorChoice = keyPressed.KeyChar.ToString();
             }
             else
             {
                 menuChoice = "default";
-                doctorChoice = "default";
-                nurseChoice = "default";
-                receptionistChoice = "default";
-                janitorChoice = "default";
+                //doctorChoice = "default";
+                //nurseChoice = "default";
+                //receptionistChoice = "default";
+                //janitorChoice = "default";
             }
 
             switch (menuChoice)
@@ -63,7 +63,11 @@ namespace UniversityClinicHospital
                     Console.WriteLine("Press 1 to have the doctor draw blood from patient");
                     Console.WriteLine("Press 2 to have the doctor care for the patient");
                     Console.WriteLine("Press 0 to Quit");
-                    Console.ReadKey();
+                    keyPressed = Console.ReadKey();
+                    if (char.IsDigit(keyPressed.KeyChar))
+                    {
+                        doctorChoice = keyPressed.KeyChar.ToString();
+                    }
                     switch (doctorChoice)
                     {
                         case "0":
@@ -71,11 +75,11 @@ namespace UniversityClinicHospital
                             break;
                         case "1":
                             myHospital.PerformTask("Doctor", 1);
-                            Console.WriteLine($"The patient's blood level is {patient.BloodLevel}");
+                            Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
                             break;
                         case "2":
                             myHospital.PerformTask("Doctor", 2);
-                            Console.WriteLine($"The patient's health level is {patient.HealthLevel}");
+                            Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
                             break;
                     }
                     break;
@@ -84,7 +88,11 @@ namespace UniversityClinicHospital
                     Console.WriteLine("Press 1 to have the nurse draw blood from patient");
                     Console.WriteLine("Press 2 to have the nurse care for the patient");
                     Console.WriteLine("Press 0 to Quit");
-                    Console.ReadKey();
+                    keyPressed = Console.ReadKey();
+                    if (char.IsDigit(keyPressed.KeyChar))
+                    {
+                        nurseChoice = keyPressed.KeyChar.ToString();
+                    }
                     switch (nurseChoice)
                     {
                         case "0":
@@ -92,9 +100,11 @@ namespace UniversityClinicHospital
                             break;
                         case "1":
                             myHospital.PerformTask("Nurse", 1);
+                            Console.WriteLine($"\nThe patient's blood level is {patient.BloodLevel}");
                             break;
                         case "2":
                             myHospital.PerformTask("Nurse", 2);
+                            Console.WriteLine($"\nThe patient's health level is {patient.HealthLevel}");
                             break;
                     }
                     break;
